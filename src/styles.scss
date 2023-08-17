@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.border-card {
+  border: 1px solid #00000036;
+  border-radius: 10px;
+  box-shadow: 10px 10px 7px -12px rgba(0,0,0,0.75);
+}
+
+.component {
+  grid-template-columns: repeat(auto-fill, 250px);
+}
+
+.card {
+  grid-template-rows: max-content 1fr;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  perspective: 1000px;
+  backface-visibility: hidden;
+  .front{
+    //display: none;
+    &.flip{
+      transform: rotateY(180deg);
+    }
+  }
+  &.flip {
+    transform: rotateY(180deg);
+    backface-visibility: visible;
+  }
+  &:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+  }
+}
+
+.back {
+  position: absolute;
+  width: 220px;
+  height: 240px;
+  background: white;
+  backface-visibility: hidden;
+  .img-sign{
+    position: relative;
+    top: 20px;
+    padding: 20px;
+  }
+  &.flip {
+    display: none;
+  }
+}

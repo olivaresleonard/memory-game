@@ -1,0 +1,28 @@
+<section>
+  <div>
+    <div class="grid grid-cols-4 gap-4">
+      <div class="col-start-1 col-span-4 md:col-start-2 md:col-span-2">
+        <div
+          class="mt-5 grid divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow md:grid-cols-2 md:divide-x md:divide-y-0">
+          <div class="px-4 py-5 sm:p-6">
+            <dt class="text-base font-normal text-gray-900">Errores</dt>
+            <dd class="mt-1 flex items-baseline justify-between md:block lg:flex">
+              <div class="flex items-baseline text-2xl font-semibold text-indigo-600">
+                {{errors}}
+              </div>
+            </dd>
+          </div>
+
+          <div class="px-4 py-5 sm:p-6">
+            <dt class="text-base font-normal text-gray-900">Aciertos</dt>
+            <dd class="mt-1 flex items-baseline justify-between md:block lg:flex">
+              <div class="flex items-baseline text-2xl font-semibold text-indigo-600">
+                {{success}}
+              </div>
+            </dd>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

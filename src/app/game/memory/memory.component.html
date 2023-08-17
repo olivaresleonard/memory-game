@@ -1,0 +1,19 @@
+<section>
+  <div class="component grid justify-center justify-items-center gap-4 p-4">
+    <div *ngFor="let md of memoryData;let i = index;" [class.flip]="showTemporal(i)" class="card bottom grid h-[16rem] w-[14rem] overflow-hidden  rounded-t-3xl rounded-b-2xl bg-white-700 p-2 border-card" (click)="select(i)">
+      <div class="front" [class.flip]="showTemporal(i)">
+        <div class="overflow-hidden rounded-2xl">
+          <img [src]="md.image" [alt]="md.name" class="h-[12rem] w-full  object-cover">
+        </div>
+        <p class="names grid items-center text-center text-2xl font-semibold text-gray-500">
+          <span>{{md.name}}</span>
+        </p>
+      </div>
+      <div class="back" [class.flip]="showTemporal(i)">
+        <div class="overflow-hidden rounded-2xl">
+          <img src="assets/sig.png" alt="back" class="h-[12rem] w-full img-sign">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
